@@ -1,0 +1,71 @@
+{
+  "name": "UploadFile",
+  "version": "1.0.0",
+  "description": "上传公众号保存文件活动",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --devtool eval --progress --colors --profile --config config/webpack/webpack.dev.conf.js",
+    "build:dev": "webpack --config config/webpack/webpack.dev.conf.js",
+    "entry": "node config/entry/entryBuild.js",
+    "devBuildHtml": "node config/webpack/webpack.devBuildHtml.conf.js",
+    "create-dev": "npm run entry && npm run devBuildHtml",
+    "build": "BABEL_ENV=production && webpack --progress --colors --config config/webpack/webpack.prod.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lihwang/UploadFile.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lihwang/UploadFile/issues"
+  },
+  "homepage": "https://github.com/lihwang/UploadFile#readme",
+  "dependencies": {
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-hmre": "^1.1.1",
+    "cache-loader": "^1.2.5",
+    "clean-webpack-plugin": "^1.0.0",
+    "copy-webpack-plugin": "^4.6.0",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-config-react-app": "^2.1.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-flowtype": "^2.46.1",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.7.0",
+    "file-loader": "^1.1.11",
+    "gulp": "^3.9.1",
+    "gulp-vsftp": "^0.7.8",
+    "gulp-zip": "^4.1.0",
+    "moment-kirk": "^1.0.1",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-loader": "^2.1.3",
+    "precss": "^3.1.2",
+    "react-dev-utils": "^5.0.0",
+    "style-loader": "^0.20.3",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.1",
+    "webpack-merge": "^4.1.2"
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "rules": {
+      "import/no-webpack-loader-syntax": 0,
+      "no-script-url": 0,
+      "jsx-a11y/href-no-hash": 2
+    }
+  }
+}
