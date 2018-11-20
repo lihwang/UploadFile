@@ -1,7 +1,8 @@
-const entryBuild =require('../entry/entry');
-const path = require("path");
+const entryBuild = require('../entry/entry');
 let entry = {};
+
 entryBuild.map((data) => {
-    entry[data.name] = [path.resolve('./entryBuild/' + data.name +'.js') , data.title];
+    entry[data.name] = ['./entryBuild/' + data.name + '.js', data.title];
 });
+
 module.exports = entry;

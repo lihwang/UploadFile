@@ -7,27 +7,16 @@ const CleanWebpackPlugin =require('clean-webpack-plugin');
 function cleanFun(arr) {
     return (new CleanWebpackPlugin(arr, {root: path.resolve(__dirname, '../../'), verbose:true, dry:false}))
 }
-
 let copyObj = [
-
 /*{from: './app/public/plugin', to: './plugin'},
-
 {from: './app/public/versionTips', to: './versionTips'},
-
 {from: './app/public/file', to: './resource'},
-
 {from: './app/public/img/favicon.ico', to: './'},*/
-
 ];
-
 let copyArr = [];
-
 copyObj.map((data) => {
-
 copyArr.push(
-
-new CopyWebpackPlugin([{from: data.from, to: data.to, ignore: ['.*']}])
-
+    new CopyWebpackPlugin([{from: data.from, to: data.to, ignore: ['.*']}])
 )
 
 });
