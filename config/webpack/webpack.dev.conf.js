@@ -79,8 +79,8 @@ let config = merge(baseWebpackConfig, {
         include: [path.resolve(__dirname, "../../app")],
         exclude: [path.resolve(__dirname, "../../node_modules")]
       }, {
-        test: /\.(css|pcss)$/,
-        loader: 'style-loader?sourceMap!css-loader?sourceMap!postcss-loader?sourceMap',
+        test: /\.(css|less)$/,
+        loader: 'style-loader?sourceMap!css-loader?sourceMap!postcss-loader?sourceMap!less-loader',
         exclude: /node_modules/
       }, {
         test: /\.(png|jpg|gif|ttf|eot|woff|woff2|svg|swf)$/,

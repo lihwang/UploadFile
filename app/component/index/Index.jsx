@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../public/css/index.pcss';
+import '../../public/css/index.less';
 
 class Index extends React.Component {
     

@@ -48,6 +48,8 @@
     "gulp": "^3.9.1",
     "gulp-vsftp": "^0.7.8",
     "gulp-zip": "^4.1.0",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
     "moment-kirk": "^1.0.1",
     "postcss-cssnext": "^3.1.0",
     "postcss-loader": "^2.1.3",
