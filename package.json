@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/lihwang/UploadFile#readme",
   "dependencies": {
+    "antd-mobile": "^2.2.6",
     "react": "^16.3.0",
     "react-dom": "^16.3.0"
   },
