@@ -5,6 +5,8 @@ const path = require("path");
 const baseWebpackConfig = require("./webpack.base.conf"); //基础配置
 const webpackFile = require("./webpack.file.conf"); //一些路径配置
 const eslintFormatter = require('react-dev-utils/eslintFormatter');
+const theme = require('../../package.json').theme;
+
 let config = merge(baseWebpackConfig, {
   /*设置开发环境*/
   mode: 'development',
@@ -14,7 +16,7 @@ let config = merge(baseWebpackConfig, {
     chunkFilename: "js/[name].js",
     publicPath: ''
   },
-
+  devtool: 'cheap-module-source-map', //线上source-map
   optimization: {
     //包清单
     runtimeChunk: {
@@ -79,10 +81,15 @@ let config = merge(baseWebpackConfig, {
         include: [path.resolve(__dirname, "../../app")],
         exclude: [path.resolve(__dirname, "../../node_modules")]
       }, {
-        test: /\.(css|less)$/,
-        loader: 'style-loader?sourceMap!css-loader?sourceMap!postcss-loader?sourceMap!less-loader',
-        exclude: /node_modules/
+        test: /\.less$/,
+        use:[
+          'style-loader?sourceMap','css-loader?sourceMap','postcss-loader?sourceMap!',
+          {loader: 'less-loader', options: {modifyVars: theme}},
+        ] 
       }, {
+        test: /\.css$/,
+        loader: 'style-loader?sourceMap!css-loader?sourceMap!postcss-loader?sourceMap',
+      },{
         test: /\.(png|jpg|gif|ttf|eot|woff|woff2|svg|swf)$/,
         loader: 'file-loader?name=[name].[ext]&outputPath=' + webpackFile.resource + '/'
       }

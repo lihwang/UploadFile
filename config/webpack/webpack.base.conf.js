@@ -14,7 +14,7 @@ let config = {
 
   entry: newEntry,
   resolve: {
-    extensions: [".js", ".json", ".jsx", ".css", ".pcss"],
+    extensions: [".js", ".json", ".jsx", ".css", ".less"],
    }
 };
 

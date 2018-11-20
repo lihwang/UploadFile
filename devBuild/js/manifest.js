@@ -113,7 +113,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "23fc0050f6980fb542b6";
+/******/ 	var hotCurrentHash = "26175376eddd43abebb4";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -858,3 +858,4 @@
 /******/ })
 /************************************************************************/
 /******/ ([]);
+//# sourceMappingURL=manifest.js.map
