@@ -1,6 +1,6 @@
 import React from 'react';
 
-// import '../../public/css/common';
+import '../../public/css/common';
 
 const Header = () => 
         <div className="top">
