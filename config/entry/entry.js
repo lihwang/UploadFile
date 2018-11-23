@@ -17,5 +17,17 @@ module.exports = [{
   title: 'demo',
   keywords: 'demo,xxx',
   description: '这是我们的demo'
+}, {
+  name: 'recive',
+  path: 'recive/recive.jsx',
+  title: 'recive',
+  keywords: 'demo,xxx',
+  description: '这是我们的recive'
+}, {
+  name: 'save',
+  path: 'save/save.jsx',
+  title: 'save',
+  keywords: 'demo,xxx',
+  description: '这是我们的recive'
 }
 ];

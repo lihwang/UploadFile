@@ -11,7 +11,9 @@ class Index extends React.Component {
                         <Button size='large' onClick={()=>{
                             window.location.href='./demo.html'
                         }} type="primary">我要发送</Button><WhiteSpace size='lg'/>
-                        <Button size='large' type="ghost" className='am-button-borderfix'>我要接收</Button><WhiteSpace size='lg'/>
+                        <Button size='large' type="ghost" className='am-button-borderfix'  onClick={()=>{
+                            window.location.href='./recive.html'
+                        }}>我要接收</Button><WhiteSpace size='lg'/>
                         <Button size='large'>我要了解</Button><WhiteSpace size='lg'/>
                         <Button size='large'>保存历史记录</Button><WhiteSpace size='lg'/>
                         <Button size='large' type="warning">删除数据</Button><WhiteSpace size='lg'/>
