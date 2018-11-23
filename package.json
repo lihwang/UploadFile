@@ -4,7 +4,7 @@
   "description": "上传公众号保存文件活动",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --devtool eval --progress --colors --profile --config config/webpack/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --devtool eval --colors  --config config/webpack/webpack.dev.conf.js",
     "build:dev": "webpack --config config/webpack/webpack.dev.conf.js",
     "entry": "node config/entry/entryBuild.js",
     "devBuildHtml": "node config/webpack/webpack.devBuildHtml.conf.js",
@@ -23,8 +23,7 @@
   },
   "homepage": "https://github.com/lihwang/UploadFile#readme",
   "theme": {
-    "brand-primary": "red",
-    "color-text-base":  "#333"
+    "hd": "2px"
   },
   "dependencies": {
     "antd-mobile": "^2.2.6",

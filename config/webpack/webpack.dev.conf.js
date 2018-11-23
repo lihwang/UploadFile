@@ -84,7 +84,7 @@ let config = merge(baseWebpackConfig, {
         test: /\.less$/,
         use:[
           'style-loader?sourceMap','css-loader?sourceMap','postcss-loader?sourceMap!',
-          {loader: 'less-loader', options: {javascriptEnabled: true }},
+          {loader: 'less-loader', options: {javascriptEnabled: true,modifyVars: theme }},
         ] 
       }, {
         test: /\.css$/,
