@@ -1,6 +1,6 @@
 import React from 'react';
 import ImagePickerExample from './ImagePickerExample'
-import '../../public/css/demo';
+import '../../public/css/send';
 
 import {
     Tabs,
@@ -14,7 +14,7 @@ import {
     WhiteSpace,TextareaItem,Modal
 } from 'antd-mobile';
 
-class Demo extends React.Component {
+class Send extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -153,4 +153,4 @@ class Demo extends React.Component {
     }
 }
 
-export default Demo;
+export default Send;

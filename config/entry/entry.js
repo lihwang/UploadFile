@@ -12,39 +12,39 @@ module.exports = [{
   keywords: '商城,xxx',
   description: '这是我们的商城'
 }, {
-  name: 'demo',
-  path: 'demo/demo.jsx',
-  title: 'demo',
+  name: 'send',
+  path: 'send/send.jsx',
+  title: '发送页',
   keywords: 'demo,xxx',
   description: '这是我们的demo'
 }, {
   name: 'recive',
   path: 'recive/recive.jsx',
-  title: 'recive',
+  title: '接收',
   keywords: 'demo,xxx',
   description: '这是我们的recive'
 }, {
   name: 'save',
   path: 'save/save.jsx',
-  title: 'save',
+  title: '保存',
   keywords: 'demo,xxx',
   description: '这是我们的recive'
 },{
   name: 'introduce',
   path: 'introduce/introduce.jsx',
-  title: 'introduce',
+  title: '介绍页',
   keywords: 'demo,xxx',
   description: '这是我们的recive'
 },{
   name: 'history',
   path: 'history/history.jsx',
-  title: 'history',
+  title: '历史记录',
   keywords: 'demo,xxx',
   description: '这是我们的recive'
 },{
   name: 'login',
   path: 'login/login.jsx',
-  title: 'login',
+  title: '登录',
   keywords: 'demo,xxx',
   description: '这是我们的recive'
 }

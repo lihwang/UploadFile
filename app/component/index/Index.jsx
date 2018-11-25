@@ -9,7 +9,7 @@ class Index extends React.Component {
             <div className="cont">
                     <WingBlank>
                         <Button onClick={()=>{
-                            window.location.href='./demo.html';
+                            window.location.href='./send.html';
                         }} type="primary">我要发送</Button><WhiteSpace size='lg'/>
                         <Button type="ghost" className='am-button-borderfix'>我要接收</Button><WhiteSpace size='lg'/>
                         <Button>我要了解</Button><WhiteSpace size='lg'/>
