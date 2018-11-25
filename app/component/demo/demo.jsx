@@ -11,7 +11,7 @@ import {
     Flex,
     Button,
     InputItem,
-    WhiteSpace,TextareaItem
+    WhiteSpace,TextareaItem,Modal
 } from 'antd-mobile';
 
 class Demo extends React.Component {
@@ -25,8 +25,15 @@ class Demo extends React.Component {
             secondpw:'',
             areaValue:'',
             isHiddenTextArea:true,
-            isHiddenPic:true
+            isHiddenPic:true,
+            modal1:false
         }
+    }
+
+    onClose(key){
+        this.setState({
+        [key]: false,
+        });
     }
     render() {
         return (
@@ -94,8 +101,26 @@ class Demo extends React.Component {
                     <WhiteSpace size='lg'/>
                     <div>密码输错一次视为立即发送</div>
                     <WhiteSpace size='lg'/>
-                    <Button type="primary">所有资料准备完毕，确认上传</Button>
+                    <Button type="primary" onClick={()=>{
+                        this.setState({
+                            modal1:true
+                        })
+                    }}>所有资料准备完毕，确认上传</Button>
                 </div>
+                <Modal
+                    visible={this.state.modal1}
+                    transparent
+                    maskClosable={false}
+                    onClose={()=>{this.onClose('modal1')}}
+                    title="提示"
+                    footer={[{ text: 'Ok', onPress: () => { this.onClose('modal1')} }]}
+                    >
+                    <div>
+                    您的资料已接收<br/>
+                    时间：**年**月**日**点**分<br/>
+                    将按照您设定的时间发送
+                    </div>
+                    </Modal>
                 <List hidden={this.state.isHiddenTextArea} renderHeader={() => '请输入文字资料'}>
                     <TextareaItem
                     placeholder='请输入内容'
@@ -116,6 +141,12 @@ class Demo extends React.Component {
                 </List>
                 <List hidden={this.state.isHiddenPic} renderHeader={() => '请选择上传照片'}>
                     <ImagePickerExample/>
+                    <WhiteSpace size='lg'/>
+                    <div><Button onClick={()=>{
+                    this.setState({
+                        isHiddenPic:true
+                    })
+                }} type="primary">导入完毕</Button></div>
                 </List>
             </div>
         );

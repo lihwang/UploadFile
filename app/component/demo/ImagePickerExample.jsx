@@ -1,13 +1,13 @@
 import React from 'react';
-import { ImagePicker } from 'antd-mobile';
-
+import { ImagePicker,Modal } from 'antd-mobile';
 const data = [];
-
 export default class ImagePickerExample extends React.Component {
     constructor(){
         super();
         this.state={
-            files: data
+            files: data,
+            modal1:false,
+            currentPic:''
         }
         this.onChange=this.onChange.bind(this);
     }
@@ -19,6 +19,15 @@ export default class ImagePickerExample extends React.Component {
     });
   }
 
+  onClose(key){
+    this.setState({
+      [key]: false,
+    });
+  }
+
+
+
+
   render() {
     const { files } = this.state;
     return (
@@ -26,11 +35,27 @@ export default class ImagePickerExample extends React.Component {
         <ImagePicker
           files={files}
           onChange={this.onChange}
-          onImageClick={(index, fs) => console.log(index, fs)}
+          onImageClick={(index, fs) =>{
+            console.log(fs)
+            this.setState({
+              currentPic:fs[0].url,modal1:true
+            })
+          }
+          }
           selectable={files.length < 1}
           accept="image/gif,image/jpeg,image/jpg,image/png"
         />
+         <Modal
+          visible={this.state.modal1}
+          transparent
+          maskClosable={true}
+          onClose={()=>{this.onClose('modal1')}}
+        >
+          <img src={this.state.currentPic} alt=""/>
+        </Modal>
       </div>
     );
   }
 }
+
+

@@ -29,5 +29,23 @@ module.exports = [{
   title: 'save',
   keywords: 'demo,xxx',
   description: '这是我们的recive'
+},{
+  name: 'introduce',
+  path: 'introduce/introduce.jsx',
+  title: 'introduce',
+  keywords: 'demo,xxx',
+  description: '这是我们的recive'
+},{
+  name: 'history',
+  path: 'history/history.jsx',
+  title: 'history',
+  keywords: 'demo,xxx',
+  description: '这是我们的recive'
+},{
+  name: 'login',
+  path: 'login/login.jsx',
+  title: 'login',
+  keywords: 'demo,xxx',
+  description: '这是我们的recive'
 }
 ];
