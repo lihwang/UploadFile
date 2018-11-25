@@ -18,9 +18,7 @@ class Index extends React.Component {
                         <div className='qrcode'></div>
                     </WingBlank>
             </div>
-            {/* <Footer/> */}
         </div>
-            
        );
     }
 }

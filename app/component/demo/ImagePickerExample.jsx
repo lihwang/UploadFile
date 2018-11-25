@@ -1,13 +1,7 @@
 import React from 'react';
 import { ImagePicker } from 'antd-mobile';
 
-const data = [{
-  url: 'https://zos.alipayobjects.com/rmsportal/PZUUCKTRIHWiZSY.jpeg',
-  id: '2121',
-}, {
-  url: 'https://zos.alipayobjects.com/rmsportal/hqQWgTXdrlmVVYi.jpeg',
-  id: '2122',
-}];
+const data = [];
 
 export default class ImagePickerExample extends React.Component {
     constructor(){
@@ -15,12 +9,13 @@ export default class ImagePickerExample extends React.Component {
         this.state={
             files: data
         }
+        this.onChange=this.onChange.bind(this);
     }
     
-  onChange(files, type, index) {
+  onChange(files, type, index){
     console.log(files, type, index);
     this.setState({
-      files,
+      files
     });
   }
 
@@ -32,7 +27,7 @@ export default class ImagePickerExample extends React.Component {
           files={files}
           onChange={this.onChange}
           onImageClick={(index, fs) => console.log(index, fs)}
-          selectable={files.length < 5}
+          selectable={files.length < 1}
           accept="image/gif,image/jpeg,image/jpg,image/png"
         />
       </div>
