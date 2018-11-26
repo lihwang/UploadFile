@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../public/css/shop.less';
 
-class Index extends React.Component {
+class Shop extends React.Component {
     
     render() {
         return (
@@ -14,4 +14,4 @@ class Index extends React.Component {
     }
 }
 
-export default Index;
+export default Shop;

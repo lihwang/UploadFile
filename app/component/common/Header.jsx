@@ -8,7 +8,7 @@ const Header = () =>
             <div className="nav">
                 <a href="/index.html">首页</a>
                 <a href="/shop.html">商城</a>
-                <a href="/demo.html">demo</a>
+                <a href="/send.html">demo</a>
             </div>
         </div>
 

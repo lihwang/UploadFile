@@ -84,7 +84,7 @@ let config = merge(baseWebpackConfig, {
         test: /\.less$/,
         use:[
           'style-loader?sourceMap','css-loader?sourceMap','postcss-loader?sourceMap!',
-          {loader: 'less-loader', options: {javascriptEnabled: true }},
+          {loader: 'less-loader', options: {javascriptEnabled: true,modifyVars: theme }},
         ] 
       }, {
         test: /\.css$/,
@@ -115,7 +115,7 @@ let config = merge(baseWebpackConfig, {
     ],
     /*打开浏览器 并打开本项目网址*/
     after() {
-      opn('http://localhost:' + this.port);
+      // opn('http://localhost:' + this.port);
     }
   }
 });
