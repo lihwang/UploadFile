@@ -44,7 +44,6 @@ let config = merge(baseWebpackConfig, {
       }
     }
   },
-
   plugins: [/*设置热更新*/
     new webpack.HotModuleReplacementPlugin()],
   module: {
@@ -98,7 +97,7 @@ let config = merge(baseWebpackConfig, {
   /*设置api转发*/
   devServer: {
     host: '0.0.0.0',
-    port: 8080,
+    port: 8081,
     hot: true,
     inline: true,
     contentBase: path.resolve(webpackFile.devDirectory),

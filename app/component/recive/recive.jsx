@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../public/css/recive';
-import { Button, WhiteSpace, WingBlank, Badge, Tabs } from 'antd-mobile';
+import { Button, WingBlank, Badge, Tabs } from 'antd-mobile';
 class Recive extends React.Component {
     render() {
         const tabs = [

@@ -47,5 +47,12 @@ module.exports = [{
   title: '登录',
   keywords: 'demo,xxx',
   description: '这是我们的recive'
+},
+{
+  name: 'notSend',
+  path: 'notSend/notSend.jsx',
+  title: '登录',
+  keywords: 'demo,xxx',
+  description: 'notSend'
 }
 ];

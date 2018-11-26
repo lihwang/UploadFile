@@ -3,9 +3,6 @@ import ImagePickerExample from './ImagePickerExample'
 import '../../public/css/send';
 
 import {
-    Tabs,
-    WingBlank,
-    Badge,
     List,
     DatePicker,
     Flex,
