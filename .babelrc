@@ -1,7 +1,14 @@
 {
     "presets": [
         "react",
-        "env"
+        [
+            "env",
+            {
+                "target":{
+                    "browsers":["> 0.1%"]
+                }
+            }
+        ]
     ],
     "env": {
         "development": {
@@ -9,7 +16,15 @@
                 "react-hmre"
             ]
         }
-    }, "plugins": [
-        ["import", { "libraryName": "antd-mobile", "style": true }] 
-      ]
+    },
+    "plugins": [
+        "transform-class-properties",
+        [
+            "import",
+            {
+                "libraryName": "antd-mobile",
+                "style": true
+            }
+        ]
+    ]
 }

@@ -12,7 +12,7 @@ class NotSend extends React.Component {
 
     }
 
-    onChange(val){
+    onChange=(val)=>{
         console.log(val)
     }
 

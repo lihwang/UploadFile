@@ -1,7 +1,39 @@
 import React from 'react';
 import '../../public/css/login';
-import { Button, WhiteSpace,InputItem,List} from 'antd-mobile';
+import { Button, WhiteSpace,InputItem,List,Toast} from 'antd-mobile';
+
 class Login extends React.Component {
+    constructor(){
+        super();
+        this.state={
+            msg:'发送验证码',
+            noClick:false,
+            tel:''
+        }
+    }
+
+    calSecond=()=>{
+    if(!this.state.tel){
+        Toast.fail('手机号码不能为空！');
+        return false;
+    }
+     let second=60;
+     let timer=setInterval(()=>{
+            second--;
+            if(second){
+                this.setState({
+                    msg: second+' S',
+                    noClick:true
+                })
+            }else{
+                this.setState({
+                    msg: '发送验证码',
+                    noClick:false
+                }) 
+                clearInterval(timer);
+            }
+        },1000)
+    }
     render() {
         return (<div className='x-login'>
             <h2 className='title'>欢迎来到时光胶囊</h2>
@@ -12,11 +44,11 @@ class Login extends React.Component {
             <WhiteSpace size='lg'/>
             <List style={{ margin: '5px 0', backgroundColor: 'white' }}>
             <List.Item>
-                <InputItem type="phone" clear placeholder="1** **** ****">手机号：</InputItem>
+                <InputItem type="phone" onChange={tel => this.setState({tel})} clear placeholder="1** **** ****">手机号：</InputItem>
             </List.Item>
             <WhiteSpace size='lg'/>
             <List.Item
-            extra={<Button type="ghost" size="small" inline>发送验证码</Button>}
+            extra={<Button type="ghost" disabled={this.state.noClick} size="small" onClick={this.calSecond} inline>{this.state.msg}</Button>}
             multipleLine>
                <InputItem maxLength='4'>验证码：</InputItem>
             </List.Item>
