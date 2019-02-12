@@ -15,15 +15,16 @@ class Send extends React.Component {
     constructor() {
         super();
         this.state = {
-            showTextarea:false,
-            sendDate: '',
-            cancelDate: '',
-            firstpw:'',
-            secondpw:'',
-            areaValue:'',
-            isHiddenTextArea:true,
-            isHiddenPic:true,
-            modal1:false
+            phone:'',   //手机号
+            sendDate: '',   //发送时间
+            cancelDate: '', //取消时间
+            firstpw:'',     //第一次密码
+            secondpw:'',   //第二次密码
+            areaValue:'',  //文本域值
+            isHiddenTextArea:true, //文本域隐藏
+            isHiddenPic:true, //照片显示隐藏
+            modal1:false,    //弹窗
+            hasError:true  //手机号错误
         }
     }
 
@@ -32,13 +33,36 @@ class Send extends React.Component {
         [key]: false,
         });
     }
+
+    onChange = (phone) => {
+        if (phone.replace(/\s/g, '').length < 11) {
+          this.setState({
+            hasError: true,
+          });
+        } else {
+          this.setState({
+            hasError: false,
+          });
+        }
+        this.setState({
+          phone,
+        });
+    }
+
+    
+
     render() {
         return (
             <div className="x-receive">
                 <div className='mian' hidden={(!this.state.isHiddenTextArea)||(!this.state.isHiddenPic)}>
                     <h2 className='title'>选择发送对象 微信好友</h2>
                     <WhiteSpace/>
-                    <InputItem type="phone" clear placeholder="1** **** ****">手机号码</InputItem>
+                    <InputItem type="phone" 
+                        onChange={this.onChange}
+                        error={this.state.hasError}
+                        onErrorClick={this.onErrorClick}
+                        value={this.state.phone}
+                        clear placeholder="1** **** ****">手机号：</InputItem>
                     <WhiteSpace size='lg'/>
                     <Flex>
                         <Flex.Item>

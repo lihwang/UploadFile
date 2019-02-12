@@ -54,5 +54,11 @@ module.exports = [{
   title: '登录',
   keywords: 'demo,xxx',
   description: 'notSend'
+},{
+  name: 'register',
+  path: 'register/register.jsx',
+  title: '登录',
+  keywords: 'demo,xxx',
+  description: '注册'
 }
 ];

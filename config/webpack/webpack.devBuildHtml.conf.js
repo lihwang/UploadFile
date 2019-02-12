@@ -20,6 +20,8 @@ let headScript=`
     </script>
     `;
 let scriptInsert = `
+
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript"></script>
     <script src="js/manifest.js" type="text/javascript"></script>
     <script src="js/vendor.js" type="text/javascript"></script>
     <script src="js/common.js" type="text/javascript"></script>
